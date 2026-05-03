@@ -1,0 +1,95 @@
+# 🌦️ Flutter Weather App - Lab 4
+
+## Sinh viên
+- **Họ tên:** Nguyen Ngoc Phuc Bao
+- **MSSV:** 2224802010776
+
+---
+
+## Mô tả dự án
+Ứng dụng dự báo thời tiết toàn diện được xây dựng bằng **Flutter**, tích hợp dữ liệu thời gian thực từ **OpenWeatherMap API**. Dự án tập trung vào kiến trúc sạch, quản lý trạng thái hiệu quả và trải nghiệm người dùng mượt mà.
+
+---
+
+## Tính năng chính
+
+### Dự báo thời tiết thời gian thực
+- **Vị trí hiện tại:** Tự động lấy dữ liệu thời tiết dựa trên GPS của thiết bị.
+- **Thông tin chi tiết:** Hiển thị nhiệt độ, cảm giác thực tế, độ ẩm, tốc độ gió, áp suất và tầm nhìn.
+- **Dự báo 24 giờ:** Danh sách dự báo theo từng giờ trong ngày.
+- **Dự báo 5 ngày:** Xem trước tình hình thời tiết với nhiệt độ cao nhất/thấp nhất.
+
+### Tìm kiếm và Cá nhân hóa
+- **Tìm kiếm thông minh:** Tìm kiếm thời tiết theo tên thành phố trên toàn thế giới.
+- **Yêu thích:** Lưu trữ tối đa 5 thành phố yêu thích để truy cập nhanh.
+
+### Trải nghiệm người dùng (UX)
+- **Dynamic UI:** Giao diện thay đổi màu sắc theo điều kiện thời tiết (Nắng, Mưa, Mây, Đêm).
+- **Hỗ trợ ngoại tuyến:** Cache dữ liệu để xem khi không có mạng.
+- **Pull-to-refresh:** Vuốt để cập nhật dữ liệu mới nhất.
+- **Cài đặt:** Tùy chỉnh đơn vị nhiệt độ (Celsius/Fahrenheit).
+
+---
+
+## Hình ảnh ứng dụng
+
+| Sunny | Rainy | Night |
+|-------|-------|-------|
+| <img width="288" height="623" alt="image" src="https://github.com/user-attachments/assets/6fd4b954-dc49-47d9-85db-33153e07202c" /> | <img width="292" height="623" alt="image" src="https://github.com/user-attachments/assets/2da8bb5e-ed73-40f3-9ce7-1211173342a8" /> | <img width="290" height="628" alt="image" src="https://github.com/user-attachments/assets/35e91c50-f138-4bde-8f1f-3124a3ed8074" />
+ |
+
+| Search | Forecast | Settings |
+|--------|----------|----------|
+| <img width="290" height="627" alt="image" src="https://github.com/user-attachments/assets/8aba76d7-a2ea-47f0-bfbc-3c5bb1e5359c" /> | <img width="288" height="633" alt="image" src="https://github.com/user-attachments/assets/92c5b82e-758d-4d4d-8290-974e18a89fec" /> | <img width="286" height="628" alt="image" src="https://github.com/user-attachments/assets/c113194a-e133-4cc8-b678-ffa199f12076" />
+ |
+
+| Loading | Error |
+|---------|-------|
+| <img width="282" height="625" alt="image" src="https://github.com/user-attachments/assets/78f1c26f-264d-4d22-a7da-2452fd54c8c9" /> | <img width="279" height="626" alt="image" src="https://github.com/user-attachments/assets/ac2abcbf-cdd9-4268-bbb4-065d81f30ea7" />
+ |
+
+---
+
+## Cấu hình API Key
+1. Đăng ký tại https://openweathermap.org/users/sign_up
+2. Copy file `.env.example` → đổi tên thành `.env`
+3. Thêm API key vào file `.env`:
+OPENWEATHER_API_KEY=your_api_key_here
+---
+
+## Hướng dẫn cài đặt
+```bash
+# Clone dự án
+git clone https://github.com/NguyenNgocPhucBao/NguyenNgocPhucBao_2224802010776_Lab4.git
+cd weather_app
+
+# Cài đặt thư viện
+flutter pub get
+
+# Chạy ứng dụng
+flutter run
+```
+
+---
+
+## Công nghệ sử dụng
+- **State Management:** `Provider`
+- **Networking:** `http`, `connectivity_plus`
+- **Location:** `geolocator`, `geocoding`
+- **Storage:** `shared_preferences`
+- **Utilities:** `intl`, `flutter_dotenv`, `cached_network_image`
+
+---
+
+## Known Limitations
+- API miễn phí giới hạn 1,000 calls/ngày.
+- Dữ liệu dự báo có thể chậm cập nhật 10-15 phút so với thực tế.
+- Chưa hỗ trợ các vùng không có dữ liệu trạm khí tượng.
+
+---
+
+## Future Improvements
+- Tích hợp bản đồ Radar thời tiết.
+- Thông báo đẩy khi có cảnh báo thiên tai.
+- Hỗ trợ đa ngôn ngữ.
+- Thêm Widget trên màn hình chính điện thoại.
