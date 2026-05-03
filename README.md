@@ -1,8 +1,8 @@
 # 🌦️ Flutter Weather App - Lab 4
 
 ## Sinh viên
-- **Họ tên:** Nguyen Ngoc Phuc Bao
-- **MSSV:** 2224802010776
+- **Họ tên:** Do Nhat Hao
+- **MSSV:** 2224802010367
 
 ---
 
